@@ -1,0 +1,22 @@
+---
+Title: "Rio Grande Map"
+Author: "Clemens"
+Date: "2020 July 17"
+output: html_document
+---
+
+## Rio Grande River
+### **2020 July 17th** 
+### Located between United States and Mexico
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(leaflet,warn.conflicts = FALSE, quietly = TRUE)
+```
+
+```{r plot map}
+my_map <- leaflet () %>%
+        addTiles() %>%
+        addMarkers(lat=31.761241, lng=-106.507131,
+        popup="Rio Grande River")
+my_map
+```
